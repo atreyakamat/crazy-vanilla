@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --radius: 1rem;
+  
+  /* Emotional color tokens */
+  --warmth-base: 248, 180, 190;
+  --comfort-base: 220, 200, 180;
+  --intimacy-base: 200, 140, 130;
+  
+  /* Typography rhythm */
+  --text-body: rgb(120, 100, 90);
+  --text-muted: rgb(160, 145, 135);
+  --text-whisper: rgb(180, 165, 155);
+}
+
+@layer base {
+  * {
+    @apply border-blush-100/50;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  body {
+    @apply text-warm-800 antialiased;
+    min-height: 100dvh;
+    min-height: -webkit-fill-available;
+    font-feature-settings: "rlig" 1, "calt" 1;
+    background: rgb(255, 253, 250);
+  }
+  
+  ::selection {
+    background: rgba(248, 180, 190, 0.25);
+    color: rgb(120, 80, 75);
+  }
+}
+
+@layer components {
+  /* Glass effects - soft, not harsh */
+  .glass {
+    @apply bg-white/50 backdrop-blur-md;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  
+  .glass-warm {
+    background: rgba(255, 252, 248, 0.6);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(248, 180, 190, 0.15);
+  }
+  
+  /* Romantic shadow - soft depth */
+  .shadow-romantic {
+    box-shadow: 
+      0 4px 20px -4px rgba(200, 160, 150, 0.15),
+      0 8px 30px -8px rgba(180, 140, 130, 0.1);
+  }
+}
+
+@layer utilities {
+  /* Transition utilities with emotional timing */
+  .transition-emotional {
+    transition: all 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
+  }
+  
+  .transition-breathe {
+    transition: all 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .transition-settle {
+    transition: all 1.5s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+}
+
+/* Touch-friendly mobile optimizations */
+@media (hover: none) {
+  button, a {
+    -webkit-touch-callout: none;
+  }
+}
+
+/* Prevent overscroll bounce on iOS */
+html, body {
+  overscroll-behavior: none;
+}
+
+/* Smooth text rendering */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom scrollbar - nearly invisible */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(200, 180, 170, 0.2);
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(200, 180, 170, 0.35);
+}
