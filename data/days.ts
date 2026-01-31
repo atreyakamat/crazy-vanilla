@@ -5,6 +5,9 @@ export interface DayData {
   subtitle: string;
   emoji: string;
   date: string;
+  gradientFrom?: string;
+  gradientTo?: string;
+  keyLine?: string;
 }
 
 export const days: DayData[] = [
@@ -15,6 +18,9 @@ export const days: DayData[] = [
     subtitle: "A rose for every reason I love you",
     emoji: "🌹",
     date: "Feb 7",
+    gradientFrom: "from-rose-100",
+    gradientTo: "to-pink-50",
+    keyLine: "Every petal, a reason I love you",
   },
   {
     id: 2,
@@ -23,6 +29,9 @@ export const days: DayData[] = [
     subtitle: "Hold on to what matters",
     emoji: "💍",
     date: "Feb 8",
+    gradientFrom: "from-blue-100",
+    gradientTo: "to-indigo-50",
+    keyLine: "Let's hold on to what matters",
   },
   {
     id: 3,
@@ -31,6 +40,9 @@ export const days: DayData[] = [
     subtitle: "Unwrap something sweet",
     emoji: "🍫",
     date: "Feb 9",
+    gradientFrom: "from-amber-100",
+    gradientTo: "to-orange-50",
+    keyLine: "Sweetness, unwrapped just for you",
   },
   {
     id: 4,
@@ -39,6 +51,9 @@ export const days: DayData[] = [
     subtitle: "A little comfort, just for you",
     emoji: "🧸",
     date: "Feb 10",
+    gradientFrom: "from-yellow-100",
+    gradientTo: "to-amber-50",
+    keyLine: "Here when you need comfort",
   },
   {
     id: 5,
@@ -47,6 +62,9 @@ export const days: DayData[] = [
     subtitle: "Words that stay",
     emoji: "🤝",
     date: "Feb 11",
+    gradientFrom: "from-violet-100",
+    gradientTo: "to-purple-50",
+    keyLine: "These words are my promise",
   },
   {
     id: 6,
@@ -55,6 +73,9 @@ export const days: DayData[] = [
     subtitle: "Feel the warmth",
     emoji: "🤗",
     date: "Feb 12",
+    gradientFrom: "from-orange-100",
+    gradientTo: "to-red-50",
+    keyLine: "Wrapped in warmth and presence",
   },
   {
     id: 7,
@@ -63,6 +84,9 @@ export const days: DayData[] = [
     subtitle: "Come a little closer",
     emoji: "💋",
     date: "Feb 13",
+    gradientFrom: "from-pink-100",
+    gradientTo: "to-rose-50",
+    keyLine: "A quiet moment, just us",
   },
   {
     id: 8,
@@ -71,6 +95,9 @@ export const days: DayData[] = [
     subtitle: "The moment it all comes together",
     emoji: "❤️",
     date: "Feb 14",
+    gradientFrom: "from-red-100",
+    gradientTo: "to-rose-50",
+    keyLine: "Everything leads here, to you",
   },
 ];
 

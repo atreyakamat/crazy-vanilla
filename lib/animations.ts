@@ -107,3 +107,18 @@ export const pulseAnimation = {
     repeat: Infinity,
   },
 };
+
+// Scale variants - gentle grow/shrink
+export const scaleVariants: Variants = {
+  hidden: { scale: 0.9, opacity: 0 },
+  visible: { 
+    scale: 1, 
+    opacity: 1,
+    transition: { duration: 0.5, ease: organicEasings.bloom },
+  },
+  exit: { 
+    scale: 0.95,
+    opacity: 0,
+    transition: { duration: 0.3, ease: organicEasings.fade },
+  },
+};
